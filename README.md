@@ -16,20 +16,22 @@ Popup with custom image <br>
 Reference
 ------------
 
-**show popup without instance**
+**show popup without instance:**
 ```objective-c
 + (void)customPopViewWithTitle:(NSString *)title message:(NSString *)message image:(UIImage *)image;
 ```
-
+/////////////////////
+**custom init method:**
 ```objective-c
 - (DCCustomPopupView *)initWithTitle:(NSString *)title message:(NSString *)message image:(UIImage *)image;
 ```
-custom init method
-
+/////////////////////
+**send this method ti instance to show popup:**
 ```objective-c
 - (void)show;
 ```
-
+/////////////////////
+**delegate mwthod:**
 ```objective-c
 - (void)customPopupView:(DCCustomPopupView *)popupView clickedButton:(UIButton *)button;
 ```
