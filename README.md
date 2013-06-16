@@ -16,7 +16,10 @@ Popup with custom image <br>
 Reference
 ------------
 
-`
+```objective-c
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
 + (void)customPopViewWithTitle:(NSString *)title message:(NSString *)message image:(UIImage *)image;
 - (DCCustomPopupView *)initWithTitle:(NSString *)title message:(NSString *)message image:(UIImage *)image;
 - (void)show;
@@ -31,4 +34,5 @@ Reference
 - (void)customPopupView:(DCCustomPopupView *)popupView clickedButton:(UIButton *)button;
 
 @end
-`
+
+```
