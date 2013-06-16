@@ -16,3 +16,19 @@ Popup with custom image <br>
 Reference
 ------------
 
+`
++ (void)customPopViewWithTitle:(NSString *)title message:(NSString *)message image:(UIImage *)image;
+- (DCCustomPopupView *)initWithTitle:(NSString *)title message:(NSString *)message image:(UIImage *)image;
+- (void)show;
+
+@end
+
+
+@protocol DCCustomPopupViewDelegate <NSObject>
+
+@required
+
+- (void)customPopupView:(DCCustomPopupView *)popupView clickedButton:(UIButton *)button;
+
+@end
+`
