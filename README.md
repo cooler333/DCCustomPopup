@@ -16,7 +16,7 @@ Popup with custom image <br>
 Reference
 ------------
 
-*show popup without instance*
+**show popup without instance**
 ```objective-c
 + (void)customPopViewWithTitle:(NSString *)title message:(NSString *)message image:(UIImage *)image;
 ```
