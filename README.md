@@ -1,7 +1,7 @@
 DCCustomPopup
 =============
 
-Примеры
+Example
 -------------
 
 Without Popup<br>
@@ -27,7 +27,7 @@ Reference
 - (DCCustomPopupView *)initWithTitle:(NSString *)title message:(NSString *)message image:(UIImage *)image;
 ```
 //////////////////////////////////////////<br>
-**send this method ti instance to show popup:**
+**send this method to instance to show popup:**
 ```objective-c
 - (void)show;
 ```
