@@ -17,22 +17,18 @@ Reference
 ------------
 
 ```objective-c
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
 + (void)customPopViewWithTitle:(NSString *)title message:(NSString *)message image:(UIImage *)image;
+```
+```objective-c
 - (DCCustomPopupView *)initWithTitle:(NSString *)title message:(NSString *)message image:(UIImage *)image;
+```
+```objective-c
 - (void)show;
+```
 
-@end
 
 
-@protocol DCCustomPopupViewDelegate <NSObject>
 
-@required
-
+```objective-c
 - (void)customPopupView:(DCCustomPopupView *)popupView clickedButton:(UIButton *)button;
-
-@end
-
 ```
