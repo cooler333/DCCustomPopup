@@ -104,7 +104,7 @@ static NSArray *popup;
             [_imageView setImage:image];
         } else {
             NSLog(@"init popup without custom image");
-            [_imageView setImage:[UIImage imageNamed:@"alert"]];
+            [_imageView setImage:[UIImage imageNamed:@"alert_yes"]];
         }
         [_imageView setContentMode:UIViewContentModeScaleAspectFit];
         _imageView.frame = CGRectMake(80, 10, 60, 50);

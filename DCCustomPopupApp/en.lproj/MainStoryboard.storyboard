@@ -12,11 +12,11 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C6t-yT-yHz">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title text" borderStyle="roundedRect" placeholder="Title text" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C6t-yT-yHz">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="264" id="PKv-5Y-awy"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YeU-qC-MX9">
@@ -25,19 +25,41 @@
                                     <constraint firstAttribute="width" constant="240" id="ZqU-pO-AXw"/>
                                     <constraint firstAttribute="height" constant="128" id="miR-kS-OD3"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rkd-ie-OUL">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="bgT-ys-veO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Show">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showPopup:" destination="2" eventType="touchUpInside" id="1lb-XY-T93"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.89658416970802923" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="YeU-qC-MX9" firstAttribute="top" secondItem="C6t-yT-yHz" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="3Dl-ZD-2cs"/>
                             <constraint firstItem="C6t-yT-yHz" firstAttribute="top" secondItem="3" secondAttribute="top" constant="104" id="9WQ-fu-bUG"/>
-                            <constraint firstItem="C6t-yT-yHz" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="cUL-gu-x5f"/>
+                            <constraint firstItem="Rkd-ie-OUL" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="LCb-IS-2ar"/>
+                            <constraint firstItem="Rkd-ie-OUL" firstAttribute="centerX" secondItem="YeU-qC-MX9" secondAttribute="centerX" type="default" id="aoV-v6-U2f"/>
                             <constraint firstItem="YeU-qC-MX9" firstAttribute="centerX" secondItem="C6t-yT-yHz" secondAttribute="centerX" type="default" id="jax-iK-oNI"/>
+                            <constraint firstAttribute="bottom" secondItem="Rkd-ie-OUL" secondAttribute="bottom" constant="220" id="jb4-vQ-o4F"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="subtitleTextView" destination="YeU-qC-MX9" id="DMt-oK-rGA"/>
+                        <outlet property="titleTextField" destination="C6t-yT-yHz" id="Gyr-z7-cJo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
@@ -46,6 +68,11 @@
     <classes>
         <class className="DCViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DCViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="showPopup:"/>
+                <relationship kind="outlet" name="subtitleTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="titleTextField" candidateClass="UITextField"/>
+            </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
