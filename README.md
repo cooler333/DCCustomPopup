@@ -57,6 +57,7 @@ DCCustomPopup
     [customPopupView show];
 }
 
+// Delegate method
 - (void)customPopupView:(DCCustomPopupView *)popupView clickedButton:(UIButton *)button {
     if (popupView.tag == 1) {
         NSLog(@"Button was clicked");
