@@ -1,5 +1,4 @@
-DCCustomPopup
-=============
+#DCCustomPopup
 
 ## Example
 
