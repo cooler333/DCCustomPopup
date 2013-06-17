@@ -17,17 +17,17 @@ Reference
 --------------
 
 ///////////////////////////////////////////////////<br>
-**show popup without instance:**
+###show popup without instance:
 ```objective-c
 + (void)customPopViewWithTitle:(NSString *)title message:(NSString *)message image:(UIImage *)image;
 ```
 //////////////////////////////////<br>
-**custom init method:**
+###custom init method:
 ```objective-c
 - (DCCustomPopupView *)initWithTitle:(NSString *)title message:(NSString *)message image:(UIImage *)image;
 ```
 //////////////////////////////////////////////////////////////////////////<br>
-**send this method to instance to show popup:**
+##send this method to instance to show popup:
 ```objective-c
 - (void)show;
 ```
