@@ -24,9 +24,9 @@ DCCustomPopup
   <tr><th colspan="2" style="text-align:center;">Core</th></tr>
   <tr>
     <td><a href="http://afnetworking.github.com/AFNetworking/Classes/AFURLConnectionOperation.html">Show popup without instance</a></td>
-    <td>```objective-c
+    <td><tt>```objective-c
     + (void)customPopViewWithTitle:(NSString *)title message:(NSString *)message image:(UIImage *)image;
-        ```
+        ```</tt>
     </td>
   </tr>
 </table>
