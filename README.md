@@ -28,7 +28,6 @@ DCCustomPopup
     + (void)customPopViewWithTitle:(NSString *)title message:(NSString *)message image:(UIImage *)image;
         ```
     </td>
-    <td>An <tt>NSOperation</tt> that implements the <tt>NSURLConnection</tt> delegate methods.</td>
   </tr>
 </table>
 
