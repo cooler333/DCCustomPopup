@@ -20,6 +20,18 @@ DCCustomPopup
 
 ## Reference
 
+<table>
+  <tr><th colspan="2" style="text-align:center;">Core</th></tr>
+  <tr>
+    <td><a href="http://afnetworking.github.com/AFNetworking/Classes/AFURLConnectionOperation.html">Show popup without instance</a></td>
+    <td>```objective-c
+    + (void)customPopViewWithTitle:(NSString *)title message:(NSString *)message image:(UIImage *)image;
+        ```
+    </td>
+    <td>An <tt>NSOperation</tt> that implements the <tt>NSURLConnection</tt> delegate methods.</td>
+  </tr>
+</table>
+
 ### Show popup without instance:
 ```objective-c
     + (void)customPopViewWithTitle:(NSString *)title message:(NSString *)message image:(UIImage *)image;
