@@ -20,16 +20,6 @@ DCCustomPopup
 
 ## Reference
 
-<table>
-  <tr><th colspan="2" style="text-align:center;">Show popup without instance</th></tr>
-  <tr>
-    <td><tt>```objective-c
-    + (void)customPopViewWithTitle:(NSString *)title message:(NSString *)message image:(UIImage *)image;
-        ```</tt>
-    </td>
-  </tr>
-</table>
-
 ### Show popup without instance:
 ```objective-c
     + (void)customPopViewWithTitle:(NSString *)title message:(NSString *)message image:(UIImage *)image;
