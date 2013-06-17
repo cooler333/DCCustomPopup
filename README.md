@@ -24,20 +24,10 @@ DCCustomPopup
 ```objective-c
     + (void)customPopViewWithTitle:(NSString *)title message:(NSString *)message image:(UIImage *)image;
 ```
-```objective-c
-    [DCCustomPopupView customPopViewWithTitle:titleTextField.text message:subtitleTextView.text image:nil];
-```
 
 ### Custom init method:
 ```objective-c
     - (DCCustomPopupView *)initWithTitle:(NSString *)title message:(NSString *)message image:(UIImage *)image;
-```
-```objective-c
-    UIImage *image = [UIImage imageNamed:@"alert_no"];
-    customPopupView = [[DCCustomPopupView alloc] initWithTitle:@"Title" message:@"Subtitle Subtitle Subtitle" image:image];
-    [customPopupView setDelegate:self];
-    [customPopupView setTag:1];
-    [customPopupView show];
 ```
 
 ### Send this method to instance to show popup:
@@ -49,3 +39,27 @@ DCCustomPopup
 ```objective-c
     - (void)customPopupView:(DCCustomPopupView *)popupView clickedButton:(UIButton *)button;
 ``` 
+
+## Example Usage
+
+```objective-c
+- (IBAction)showPopup:(id)sender {
+    // Show Popup without init
+    [DCCustomPopupView customPopViewWithTitle:titleTextField.text message:subtitleTextView.text image:nil];
+}
+
+- (IBAction)show:(id)sender {
+    // create instance of DCCustomPopupView
+    UIImage *image = [UIImage imageNamed:@"alert_no"]; // image: 50x50px || 100x100px(@2x)
+    DCCustomPopupView *customPopupView = [[DCCustomPopupView alloc] initWithTitle:@"Title" message:@"Subtitle Subtitle Subtitle" image:image];
+    [customPopupView setDelegate:self];
+    [customPopupView setTag:1];
+    [customPopupView show];
+}
+
+- (void)customPopupView:(DCCustomPopupView *)popupView clickedButton:(UIButton *)button {
+    if (popupView.tag == 1) {
+        NSLog(@"Button was clicked");
+    }
+}
+```
