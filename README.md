@@ -21,22 +21,22 @@
 
 ### Show popup without instance:
 ```objective-c
-    + (void)customPopViewWithTitle:(NSString *)title message:(NSString *)message image:(UIImage *)image;
++ (void)customPopViewWithTitle:(NSString *)title message:(NSString *)message image:(UIImage *)image;
 ```
 
 ### Custom init method:
 ```objective-c
-    - (DCCustomPopupView *)initWithTitle:(NSString *)title message:(NSString *)message image:(UIImage *)image;
+- (DCCustomPopupView *)initWithTitle:(NSString *)title message:(NSString *)message image:(UIImage *)image;
 ```
 
 ### Send this method to instance to show popup:
 ```objective-c
-    - (void)show;
+- (void)show;
 ```
 
 ### delegate method:
 ```objective-c
-    - (void)customPopupView:(DCCustomPopupView *)popupView clickedButton:(UIButton *)button;
+- (void)customPopupView:(DCCustomPopupView *)popupView clickedButton:(UIButton *)button;
 ``` 
 
 ## Example Usage
